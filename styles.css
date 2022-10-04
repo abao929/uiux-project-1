@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.little {
+  font-size: 12px;
+}
+
+.right {
+  text-align: right;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2vh 7vw 5vh 7vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+  font: 400 clamp(2.5em, 8vw, 6rem) scotch-display;
+  text-shadow: 4px 4px 8px rgba(17, 12, 46, 0.2);
+}
+
+.page-title.right {
+  text-shadow: -4px 4px 8px rgba(17, 12, 46, 0.2);
+}
+
+.page-subtitle {
+  font: 300 clamp(1.5rem, 2vw, 2.5rem) forma-djr-display;
+  letter-spacing: 2px;
+}
+
+.cols {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  text-align: justify;
+}
+.cols > .col {
+  flex: 1;
+}
+
+#landing.page {
+  justify-content: center;
+  align-items: flex-start;
+}
+#landing.page h1 {
+  padding-top: 1em;
+  font: 500 clamp(4.5rem, 14vw, 8rem) scotch-display;
+  text-shadow: 4px 4px 8px rgba(17, 12, 46, 0.2);
+}
+@media (max-width: 600px) {
+  #landing.page h1 {
+    padding: 0 0 1em 0;
+  }
+}
+#landing.page h2 {
+  font: 400 clamp(1.75rem, 3vw, 3rem) forma-djr-display;
+  letter-spacing: 2px;
+}
+#landing.page h3 {
+  font: 300 clamp(1.5rem, 2vw, 2.5rem) scotch-display;
+}
+@media (max-width: 600px) {
+  #landing.page h3 {
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 900px) {
+  #interface .cols {
+    flex-flow: column-reverse;
+  }
+}
+#interface .content-text {
+  flex: 1;
+  font: 300 clamp(1rem, 1.25vw, 1.5rem)/1.5em sans-serif;
+  padding: 1.5rem 0;
+}
+#interface .interface-image {
+  flex: 1;
+  background: url("images/interface.png") center no-repeat;
+  background-size: auto 80%;
+}
+@media (max-width: 900px) {
+  #interface .interface-image {
+    min-height: 300px;
+  }
+}
+
+#observations .cols {
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  #observations .cols {
+    flex-direction: column;
+  }
+}
+#observations .cols .lhs {
+  flex: 1;
+  font: 400 5vw scotch-display;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  #observations .cols .lhs {
+    font: 400 12vw scotch-display;
+  }
+}
+#observations .cols .lhs .user-row {
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #1d1d1d;
+}
+#observations .cols .lhs .user-row:last-child {
+  border: none;
+}
+#observations .cols .lhs .user-row .summary, #observations .cols .lhs .user-row .interview {
+  display: none;
+}
+#observations .cols .rhs {
+  flex: 2;
+  font: 300 clamp(1rem, 1.5vw, 1.5rem)/1.5em sans-serif;
+  padding: 1.5rem 0;
+}
+#observations .cols .rhs h1 {
+  font: 500 clamp(2rem, 3vw, 3rem) forma-djr-display;
+  padding: 1rem 0;
+}
+
+#personas .cols {
+  padding: 2rem 0;
+}
+@media (max-width: 600px) {
+  #personas .cols {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#personas .cols > .col:first-child {
+  padding-right: clamp(2rem, 5vw, 5rem);
+}
+@media (max-width: 600px) {
+  #personas .cols > .col:first-child {
+    padding: 0;
+  }
+}
+#personas .cols > .col:last-child {
+  padding-left: clamp(2rem, 5vw, 5rem);
+}
+@media (max-width: 600px) {
+  #personas .cols > .col:last-child {
+    padding: 0;
+  }
+}
+#personas .cols > .col > img {
+  max-width: 100%;
+  border: 2px solid black;
+}
+
+#storyboard .panels {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+#storyboard .panels .panel {
+  flex: 0 0 calc(33.33% - clamp(2rem, 4%, 3rem));
+  margin: clamp(2rem, 4%, 3rem) 0;
+  border: 2px solid black;
+}
+#storyboard .panels .panel:last-child {
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  #storyboard .panels .panel {
+    flex: 0 0 calc(50% - 24px);
+  }
+}
+#storyboard .panels .panel > img {
+  max-width: 100%;
+}/*# sourceMappingURL=styles.css.map */

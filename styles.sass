@@ -1,0 +1,137 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.little
+  font-size: 12px
+
+.right
+  text-align: right
+  
+.page
+  width: 100%
+  min-height: 100vh
+  padding: 2vh 7vw 5vh 7vw
+  display: flex
+  flex-direction: column
+
+.page-title
+  font: 400 clamp(2.5em, 8vw, 6rem) scotch-display
+  text-shadow: 4px 4px 8px rgba(17, 12, 46, 0.2)
+
+.page-title.right
+  text-shadow: -4px 4px 8px rgba(17, 12, 46, 0.2)
+
+.page-subtitle
+  font: 300 clamp(1.5rem, 2vw, 2.5rem) forma-djr-display
+  letter-spacing: 2px
+
+.cols
+  flex: 1
+  display: flex
+  flex-direction: row
+  height: 100%
+  text-align: justify
+  & > .col
+    flex: 1
+
+#landing.page
+  justify-content: center
+  align-items: flex-start
+  h1
+    padding-top: 1em
+    font: 500 clamp(4.5rem, 14vw, 8rem) scotch-display
+    text-shadow: 4px 4px 8px rgba(17, 12, 46, 0.2)
+    @media (max-width: 600px)
+      padding: 0 0 1em 0
+  h2
+    font: 400 clamp(1.75rem, 3vw, 3rem) forma-djr-display
+    letter-spacing: 2px
+  h3
+    font: 300 clamp(1.5rem, 2vw, 2.5rem) scotch-display
+    @media (max-width: 600px)
+      padding-bottom: 2em
+
+
+
+#interface
+  .cols
+    @media (max-width: 900px)
+      flex-flow: column-reverse
+  .content-text
+    flex: 1
+    font: 300 clamp(1rem, 1.25vw, 1.5rem) / 1.5em sans-serif
+    padding: 1.5rem 0
+  .interface-image
+    flex: 1
+    background: url("images/interface.png") center no-repeat
+    background-size: auto 80%
+    @media (max-width: 900px)
+      min-height: 300px
+
+#observations
+  .cols
+    justify-content: center
+    align-items: center
+    text-align: left
+    @media (max-width: 600px)
+      flex-direction: column
+    .lhs
+      flex: 1
+      font: 400 5vw scotch-display
+      text-align: center
+      @media (max-width: 600px) 
+        font: 400 12vw scotch-display
+      .user-row
+        cursor: pointer
+        width: 80%
+        margin: 0 auto
+        border-bottom: 1px solid #1d1d1d
+        &:last-child
+          border: none
+        .summary, .interview
+          display: none
+    .rhs
+      flex: 2
+      font: 300 clamp(1rem, 1.5vw, 1.5rem) / 1.5em sans-serif
+      padding: 1.5rem 0
+      h1
+        font: 500 clamp(2rem, 3vw, 3rem) forma-djr-display
+        padding: 1rem 0
+
+#personas
+  .cols
+    padding: 2rem 0
+    @media (max-width: 600px)
+      flex-direction: column
+      align-items: center
+    & > .col
+      &:first-child
+        padding-right: clamp(2rem, 5vw, 5rem)
+        @media (max-width: 600px)
+          padding: 0
+      &:last-child
+        padding-left: clamp(2rem, 5vw, 5rem)
+        @media (max-width: 600px)
+          padding: 0
+      & > img
+        max-width: 100%
+        border: 2px solid black
+
+#storyboard
+  .panels
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    padding: 0 3vw
+    .panel
+      flex: 0 0 calc(33.33% - clamp(2rem, 4%, 3rem))
+      margin: clamp(2rem, 4%, 3rem) 0
+      border: 2px solid black
+      &:last-child
+        margin: 0 auto
+      @media (max-width: 600px) 
+        flex: 0 0 calc(50% - 24px)
+      & > img
+        max-width: 100%
